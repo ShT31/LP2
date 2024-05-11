@@ -1,0 +1,11 @@
+public class CurrencyConverterController {
+    public static Decimal convertCurrency(Decimal amount, Decimal exchangeRate) {
+        return amount * exchangeRate;
+    }
+}
+
+Decimal amount = 100;
+Decimal exchangeRate = 0.85; // For example, 1 USD = 0.85 EUR
+
+Decimal convertedAmount = CurrencyConverterController.convertCurrency(amount, exchangeRate);
+System.debug('Converted Amount: ' + convertedAmount);

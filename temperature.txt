@@ -1,0 +1,17 @@
+public class TemperatureConverterController {
+    public static Decimal celsiusToFahrenheit(Decimal celsius) {
+        return (celsius * 9/5) + 32;
+    }
+    
+    public static Decimal fahrenheitToCelsius(Decimal fahrenheit) {
+        return (fahrenheit - 32) * 5/9;
+    }
+}
+
+Decimal celsiusTemp = 30;
+
+Decimal fahrenheitTemp = TemperatureConverterController.celsiusToFahrenheit(celsiusTemp);
+System.debug('Temperature in Fahrenheit: ' + fahrenheitTemp);
+
+Decimal convertedBackToCelsius = TemperatureConverterController.fahrenheitToCelsius(fahrenheitTemp);
+System.debug('Temperature in Celsius (Converted Back): ' + convertedBackToCelsius);

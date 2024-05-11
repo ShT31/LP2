@@ -1,0 +1,26 @@
+public class CalculatorController {
+    public static Decimal performCalculation(Decimal operand1, Decimal operand2, String operator) {
+        Decimal result;
+        if(operator == '+') {
+            result = operand1 + operand2;
+        } else if(operator == '-') {
+            result = operand1 - operand2;
+        } else if(operator == '*') {
+            result = operand1 * operand2;
+        } else if(operator == '/') {
+            if(operand2 != 0) {
+                result = operand1 / operand2;
+            } else {
+                result = null; // Handle division by zero
+            }
+        }
+        return result;
+    }
+}
+
+Decimal operand1 = 10;
+Decimal operand2 = 5;
+String operator = '+';
+
+Decimal result = CalculatorController.performCalculation(operand1, operand2, operator);
+System.debug('Result: ' + result);

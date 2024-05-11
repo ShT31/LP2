@@ -1,0 +1,11 @@
+public class ElectricBillCalculator {
+    public static Decimal calculateElectricBill(Integer unitsConsumed, Decimal ratePerUnit) {
+        return unitsConsumed * ratePerUnit;
+    }
+}
+
+Integer unitsConsumed = 150;
+Decimal ratePerUnit = 5.25; // For example, rate per unit is $5.25
+
+Decimal billAmount = ElectricBillCalculator.calculateElectricBill(unitsConsumed, ratePerUnit);
+System.debug('Electric Bill Amount: $' + billAmount);

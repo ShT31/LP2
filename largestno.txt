@@ -1,0 +1,19 @@
+public class LargestNumberFinder {
+    public static Integer findLargestNumber(Integer num1, Integer num2, Integer num3) {
+        Integer largest = num1;
+        if (num2 > largest) {
+            largest = num2;
+        }
+        if (num3 > largest) {
+            largest = num3;
+        }
+        return largest;
+    }
+}
+
+Integer num1 = 15;
+Integer num2 = 27;
+Integer num3 = 10;
+
+Integer largestNumber = LargestNumberFinder.findLargestNumber(num1, num2, num3);
+System.debug('Largest Number: ' + largestNumber);

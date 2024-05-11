@@ -1,0 +1,30 @@
+public class StudentMarksheetGenerator {
+    public static String generateMarksheet(String studentName, Integer mathMarks, Integer scienceMarks, Integer englishMarks) {
+        Integer totalMarks = mathMarks + scienceMarks + englishMarks;
+        Decimal averageMarks = totalMarks / 3.0;
+        
+        String marksheet = 'Student Name: ' + studentName + '
+';
+        marksheet += 'Math Marks: ' + mathMarks + '
+';
+        marksheet += 'Science Marks: ' + scienceMarks + '
+';
+        marksheet += 'English Marks: ' + englishMarks + '
+';
+        marksheet += 'Total Marks: ' + totalMarks + '
+';
+        marksheet += 'Average Marks: ' + averageMarks + '
+';
+        
+        return marksheet;
+    }
+}
+
+String studentName = 'John Doe';
+Integer mathMarks = 85;
+Integer scienceMarks = 90;
+Integer englishMarks = 80;
+
+String marksheet = StudentMarksheetGenerator.generateMarksheet(studentName, mathMarks, scienceMarks, englishMarks);
+System.debug('Student Marksheet:
+' + marksheet);
